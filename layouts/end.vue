@@ -1,9 +1,9 @@
 <template>
-  <div class="slidev-layout cover">
-    <img src="/backgrounds/title.svg" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
+  <div class="slidev-layout end">
+    <img src="/backgrounds/end.svg" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
 
     <!-- Content -->
-    <div class="my-auto w-full relative z-10">
+    <div class="my-auto w-full text-center relative z-10">
       <slot />
     </div>
 
