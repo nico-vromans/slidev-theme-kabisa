@@ -1,15 +1,14 @@
+<script setup lang="ts">
+defineProps({
+  logo: { type: [String, Boolean], default: 'full' },
+  logoPosition: { type: String, default: 'bottom-right' },
+})
+</script>
+
 <template>
   <div class="slidev-layout cover">
-    <img src="/backgrounds/title.svg" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
-
-    <!-- Content -->
-    <div class="my-auto w-full relative z-10">
+    <KabisaLayout background="/backgrounds/title.svg" :logo="logo" :logo-position="logoPosition">
       <slot />
-    </div>
-
-    <!-- Logo (bottom-right) -->
-    <div class="absolute bottom-8 right-14 z-10">
-      <img src="/logos/logo-on-dark-no-payoff.svg" class="h-8" alt="Kabisa" />
-    </div>
+    </KabisaLayout>
   </div>
 </template>

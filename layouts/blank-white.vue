@@ -1,7 +1,14 @@
+<script setup lang="ts">
+defineProps({
+  logo: { type: [String, Boolean], default: 'full' },
+  logoPosition: { type: String, default: 'bottom-right' },
+})
+</script>
+
 <template>
   <div class="slidev-layout blank-white">
-    <div class="relative z-10">
+    <KabisaLayout :logo="logo" :logo-position="logoPosition" :is-light="true">
       <slot />
-    </div>
+    </KabisaLayout>
   </div>
 </template>
