@@ -1,13 +1,11 @@
 <svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g clip-path="url(#clip0_18_583)">
-<rect width="1280" height="720" transform="matrix(-1 0 0 1 1280 0)" fill="url(#pattern0_18_583)"/>
-<rect width="1280" height="720" transform="matrix(-1 0 0 1 1280 0)" stroke="black"/>
-<path d="M0 -1H211V721H0V-1Z" fill="#18242B"/>
-<path d="M0 -1V-0.25H211V-1V-1.75H0V-1ZM211 721V720.25H0V721V721.75H211V721Z" fill="white"/>
+<path d="M1280 0H241V720H1280V0Z" fill="url(#pattern0_18_583)"/>
+<path d="M0 -1H248V721H0V-1Z" fill="#18242B"/>
 </g>
 <defs>
 <pattern id="pattern0_18_583" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_18_583" transform="matrix(0.000443125 0 0 0.000927646 -0.00234926 -0.00139278)"/>
+<use xlink:href="#image0_18_583" transform="matrix(-0.00054591 0 0 0.000927646 1.04717 -0.00139278)"/>
 </pattern>
 <clipPath id="clip0_18_583">
 <rect width="1280" height="720" fill="white"/>

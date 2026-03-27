@@ -1,10 +1,40 @@
 ---
 theme: ./
+layout: cover
 ---
 
 # Welcome to Kabisa
 
 A presentation about software artisanship
+
+---
+layout: solid
+---
+
+# We are software
+## ARTISANS
+
+High Tech · Fin Tech · Complex E-Commerce
+
+---
+layout: solid
+variant: green
+---
+
+# We are software
+## ARTISANS
+
+Green intro variant
+
+---
+layout: solid
+variant: white
+---
+
+# We are software
+## ARTISANS
+
+White intro variant
 
 ---
 layout: section
@@ -95,7 +125,8 @@ variant: light
 Light variant
 
 ---
-layout: end
+layout: cover
+variant: end
 ---
 
 # Bedankt

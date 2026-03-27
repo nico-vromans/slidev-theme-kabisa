@@ -4,14 +4,14 @@ export type LogoVariant = 'none' | 'bare' | 'name' | 'full'
 
 const logos: Record<string, Record<string, string>> = {
   dark: {
-    bare: '/logos/logo.svg',
-    name: '/logos/logo-on-dark-no-payoff.svg',
-    full: '/logos/logo-on-dark.svg',
+    bare: '/theme/logos/logo.svg',
+    name: '/theme/logos/logo-on-dark-no-payoff.svg',
+    full: '/theme/logos/logo-on-dark.svg',
   },
   light: {
-    bare: '/logos/logo.svg',
-    name: '/logos/logo-on-light-no-payoff.svg',
-    full: '/logos/logo-on-light.svg',
+    bare: '/theme/logos/logo.svg',
+    name: '/theme/logos/logo-on-light-no-payoff.svg',
+    full: '/theme/logos/logo-on-light.svg',
   },
 }
 

@@ -8,14 +8,14 @@ const props = defineProps({
 })
 
 const { bg, isLight } = useVariant(props.variant, {
-  default: '/backgrounds/page.svg',
-  dark: '/backgrounds/page-dark.svg',
-  light: '/backgrounds/page-light.svg',
+  default: '/theme/backgrounds/page.svg',
+  dark: '/theme/backgrounds/page-dark.svg',
+  light: '/theme/backgrounds/page-light.svg',
 })
 </script>
 
 <template>
-  <div :class="['slidev-layout default', { 'default-light': isLight }]">
+  <div :class="['slidev-layout default', `default-${variant}`]">
     <KabisaLayout :background="bg" :logo="logo" :logo-position="logoPosition" :is-light="isLight">
       <slot />
     </KabisaLayout>

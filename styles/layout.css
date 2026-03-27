@@ -62,12 +62,13 @@ html.dark {
   }
 
   h1 {
-    @apply text-4xl;
+    @apply text-[2.75rem] leading-snug;
   }
 
   h1 + p {
-    @apply -mt-2 opacity-60 mb-4;
-    color: var(--kabisa-text-secondary);
+    @apply text-xl mt-1;
+    font-family: 'Poppins', sans-serif;
+    opacity: 1;
   }
 
   a {
@@ -88,7 +89,6 @@ html.dark {
 
 .slidev-layout.cover,
 .slidev-layout.section,
-.slidev-layout.end,
 .slidev-layout.default,
 .slidev-layout.highlight {
   @apply h-full grid relative overflow-hidden;
@@ -127,166 +127,98 @@ html.dark {
   }
 }
 
+/* ===== Section subtitle colors per variant ===== */
+
+.slidev-layout.section.section-default h1 + p {
+  color: var(--kabisa-black);
+}
+
+.slidev-layout.section.section-dark h1 + p {
+  color: var(--kabisa-green);
+}
+
+.slidev-layout.section.section-light h1 + p {
+  color: var(--kabisa-green);
+}
+
+/* ===== Default subtitle color ===== */
+
+.slidev-layout.default h1 + p {
+  color: var(--kabisa-green);
+}
+
+/* ===== Highlight subtitle colors per variant ===== */
+
+.slidev-layout.highlight.highlight-default h1 + p {
+  color: var(--kabisa-black);
+}
+
+.slidev-layout.highlight.highlight-dark h1 + p {
+  color: var(--kabisa-green);
+}
+
+.slidev-layout.highlight.highlight-light h1 + p {
+  color: var(--kabisa-green);
+}
+
+/* ===== Content positioning per layout ===== */
+
+.slidev-layout .kabisa-content {
+  @apply my-auto w-full;
+}
+
+.slidev-layout.cover .kabisa-content {
+  @apply my-auto w-fit mx-auto text-left mt-[8rem];
+}
+
+.slidev-layout.cover.cover-end .kabisa-content {
+  @apply w-fit text-left mt-[8rem] ml-[10rem];
+}
+
+.slidev-layout.highlight .kabisa-content {
+  @apply my-auto w-fit mx-auto text-left mt-[8rem];
+}
+
 /* ===== Cover Layout ===== */
 
 .slidev-layout.cover {
   h1 {
-    @apply text-5xl leading-tight;
+    color: var(--kabisa-black);
   }
 
   h1 + p {
-    @apply text-lg;
-  }
-}
-
-/* ===== Section Layout ===== */
-
-.slidev-layout.section {
-  h1 {
-    @apply text-5xl leading-tight;
-  }
-}
-
-/* ===== Default Layout ===== */
-
-.slidev-layout.default {
-  h1 {
-    @apply text-4xl;
-  }
-}
-
-/* ===== Highlight Layout ===== */
-
-.slidev-layout.highlight {
-  h1 {
-    @apply text-5xl leading-tight;
-  }
-}
-
-/* ===== End Layout ===== */
-
-.slidev-layout.end {
-  h1 {
-    @apply text-5xl leading-tight;
-  }
-}
-
-/* ===== Intro Layout ===== */
-
-.slidev-layout.intro {
-  @apply h-full grid relative overflow-hidden;
-  background: var(--kabisa-black);
-  color: #fff;
-
-  h1 {
-    @apply text-5xl leading-tight;
-    color: #fff;
-  }
-
-  h2 {
-    @apply text-3xl font-800;
-    color: #fff;
-  }
-
-  p {
-    color: rgba(255, 255, 255, 0.7);
-  }
-}
-
-/* ===== TOC Layout ===== */
-
-.slidev-layout.toc {
-  background: var(--kabisa-bg);
-
-  h1 {
-    @apply text-4xl mb-1;
-  }
-
-  h1 + p {
-    @apply text-base mb-8;
-    color: var(--kabisa-text-secondary);
-  }
-}
-
-/* ===== Image Right Layout ===== */
-/* Content pane uses .slidev-layout.default, styled via Default Layout above */
-
-/* ===== Fact Layout ===== */
-
-.slidev-layout.fact {
-  @apply h-full grid relative overflow-hidden;
-  background: var(--kabisa-black);
-  color: #fff;
-
-  h1 {
-    @apply text-4xl leading-tight mb-2;
-    color: #fff;
-  }
-
-  p {
-    color: rgba(255, 255, 255, 0.6);
-  }
-}
-
-.slidev-layout.fact.fact-light {
-  background: var(--kabisa-bg);
-  color: var(--kabisa-text);
-
-  h1 {
-    color: var(--kabisa-text);
-  }
-
-  p {
-    color: var(--kabisa-text-secondary);
-  }
-}
-
-/* ===== Full Image Layout ===== */
-
-.slidev-layout.full-image {
-  @apply h-full w-full relative overflow-hidden p-0;
-}
-
-/* ===== Quote Layout ===== */
-
-.slidev-layout.quote {
-  @apply h-full grid relative overflow-hidden;
-  background: var(--kabisa-bg);
-
-  blockquote, p:first-child {
-    @apply text-2xl leading-relaxed border-none bg-transparent p-0;
-    font-weight: 300;
-    font-style: italic;
-    color: var(--kabisa-text);
-  }
-
-  em {
-    color: var(--kabisa-green);
-    font-style: italic;
-    font-weight: 600;
-  }
-}
-
-/* ===== Logos Layout ===== */
-
-.slidev-layout.logos {
-  @apply h-full grid relative overflow-hidden;
-  background: var(--kabisa-bg);
-
-  h1 {
-    @apply text-3xl text-center;
-  }
-
-  h1 + p {
-    @apply text-center;
     color: var(--kabisa-green);
   }
 }
 
-/* ===== Blank Layouts ===== */
+/* ===== Cover: End variant ===== */
 
-.slidev-layout.blank-green {
+.slidev-layout.cover.cover-end {
+  h1 {
+    color: #fff;
+  }
+}
+
+/* ===== Solid Layout ===== */
+
+.slidev-layout.solid {
   @apply h-full grid relative overflow-hidden;
+}
+
+.slidev-layout.solid.solid-dark {
+  background: var(--kabisa-black);
+  color: #fff;
+
+  h1, h2, h3, h4 {
+    color: #fff;
+  }
+
+  p {
+    color: var(--kabisa-green);
+  }
+}
+
+.slidev-layout.solid.solid-green {
   background: var(--kabisa-green);
   color: #fff;
 
@@ -295,26 +227,11 @@ html.dark {
   }
 
   p {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--kabisa-black);
   }
 }
 
-.slidev-layout.blank-dark {
-  @apply h-full grid relative overflow-hidden;
-  background: var(--kabisa-black);
-  color: #fff;
-
-  h1, h2, h3, h4 {
-    color: #fff;
-  }
-
-  p {
-    color: rgba(255, 255, 255, 0.7);
-  }
-}
-
-.slidev-layout.blank-white {
-  @apply h-full grid relative overflow-hidden;
+.slidev-layout.solid.solid-white {
   background: #ffffff;
   color: var(--kabisa-text);
 
@@ -323,31 +240,7 @@ html.dark {
   }
 
   p {
-    color: var(--kabisa-text-secondary);
+    color: var(--kabisa-green);
   }
 }
 
-/* ===== Fact circle component ===== */
-
-.kabisa-fact-circle {
-  @apply flex flex-col items-center justify-center rounded-full;
-  width: 140px;
-  height: 140px;
-  border: 3px solid var(--kabisa-green);
-}
-
-.kabisa-fact-circle .fact-number {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  @apply text-3xl;
-  color: var(--kabisa-green);
-}
-
-.kabisa-fact-circle .fact-label {
-  @apply text-xs text-center mt-1;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.fact-light .kabisa-fact-circle .fact-label {
-  color: var(--kabisa-text-secondary);
-}
